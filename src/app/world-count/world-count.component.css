@@ -1,0 +1,49 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-xs-1 {
+  width: 11%;
+}
+
+h1 {
+  font-weight: 700;
+  margin: 12px auto;
+}
+
+label {
+  height: 66px;
+  color: #717171;
+}
+
+.global {
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #184446;
+    margin-top: 18px;
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  .global {
+    margin-left: 0px;
+    padding: 10px 16px 10px 6px;
+    overflow-x: auto;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .col-xs-1 {
+    width: 75px;
+    padding: 0 4px 0 4px;
+    font-size: 12px;
+    text-align: left;
+  }
+}

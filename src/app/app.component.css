@@ -1,0 +1,35 @@
+.welcome {
+  padding: 0;
+  margin: 8px auto 0 10px;
+  font-size: 16px;
+  color: black;
+}
+
+.my-footer {
+  margin: 12px auto 6px 16px;
+}
+
+.my-footer a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.my-footer a:hover {
+  text-decoration: underline;
+}
+
+.list-container {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .welcome {
+    font-size: 14px;
+  }
+
+  .list-container {
+    height: 230px;
+    overflow-y: auto;
+  }
+}

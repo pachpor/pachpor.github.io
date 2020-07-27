@@ -1,0 +1,63 @@
+<div *ngIf="countryTotalData" class="country-container">
+  <h2>{{countryTotalData.info.title}}</h2>
+  <div class="country-count-container">
+    <div class="row">
+      <div class="col-xs-1">
+        <label>Total Cases</label>
+        <span>{{countryTotalData.total_cases | number: '2.'}}</span>
+      </div>
+      <div class="col-xs-1">
+        <label>Total Recovered</label>
+        <span>{{countryTotalData.total_recovered | number: '2.'}}</span>
+      </div>
+      <div class="col-xs-1">
+        <label>Total Deaths</label>
+        <span>{{countryTotalData.total_deaths | number: '2.'}}</span>
+      </div>
+      <div class="col-xs-1">
+        <label>New Cases Today</label>
+        <span>{{countryTotalData.total_new_cases_today | number: '2.'}}</span>
+      </div>
+      <div class="col-xs-1">
+        <label>New Deaths Today</label>
+        <span>{{countryTotalData.total_new_deaths_today | number: '2.'}}</span>
+      </div>
+      <div class="col-xs-1">
+        <label>Total Active Cases</label>
+        <span>{{countryTotalData.total_active_cases | number: '2.'}}</span>
+      </div>
+      <div class="col-xs-1">
+        <label>Total Serious Cases</label>
+        <span>{{countryTotalData.total_serious_cases | number: '2.'}}</span>
+      </div>
+      <div class="col-xs-1">
+        <label>Total Danger Rank</label>
+        <span>{{countryTotalData.total_danger_rank | number: '2.'}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="table-container">
+    <div class="table-wrapper">
+      <div class="table-row">
+        <div class="table-head">Date</div>
+        <div class="table-head">New Daily Cases</div>
+        <div class="table-head">New Daily Deaths</div>
+        <div class="table-head">Total Cases</div>
+        <div class="table-head">Total Recoveries</div>
+        <div class="table-head">Total Deaths</div>
+      </div>
+      <div class="table-body-container">
+        <div class="table-row" *ngFor="let timeline of timelines">
+          <div class="table-data">{{timeline.date | date}}</div>
+          <div class="table-data">{{timeline.new_daily_cases | number: '2.'}}</div>
+          <div class="table-data">{{timeline.new_daily_deaths | number: '2.'}}</div>
+          <div class="table-data">{{timeline.total_cases | number: '2.'}}</div>
+          <div class="table-data">{{timeline.total_recoveries | number: '2.'}}</div>
+          <div class="table-data">{{timeline.total_deaths | number: '2.'}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

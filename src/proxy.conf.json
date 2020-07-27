@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://api.thevirustracker.com/free-api",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

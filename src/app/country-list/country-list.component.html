@@ -1,0 +1,16 @@
+<div class="form-group mb-4">
+  <input
+  class="form-control"
+  type="text"
+  [(ngModel)]="userFilter.title"
+  placeholder="Search Country">
+</div>
+<div class="list-group">
+  <a
+  *ngFor="let country of countries | filterBy: userFilter"
+    class="list-group-item list-group-item-action"
+    style="cursor: pointer;"
+    (click)="onCountrySelected(country)">
+    {{country.title}}
+  </a>
+</div>
